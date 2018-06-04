@@ -21,5 +21,7 @@ RUN groupadd -g $GID jovyan && \
     useradd -r -m -u $UID -g jovyan jovyan
 USER jovyan
 
+COPY jupyter_notebook_config.py /home/jovyan/.jupyter/
+
 EXPOSE 8888
 
